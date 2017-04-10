@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<faces-config
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_1.xsd"
+    version="2.1">
+
+	<managed-bean>
+		<managed-bean-name>databaseAccessInformationBean</managed-bean-name>
+		<managed-bean-class>com.uic.edu.databaseAccess.DatabaseAccessInformationBean</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>userBean</managed-bean-name>
+		<managed-bean-class>com.uic.edu.bean.UserBean</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+	
+	<navigation-rule>
+		<display-name>UserLogin</display-name>
+		<from-view-id>/UserLogin.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>admin</from-outcome>
+			<to-view-id>/Admin.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>instructor</from-outcome>
+			<to-view-id>/Instructor.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>student</from-outcome>
+			<to-view-id>/Student.jsp</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>false</from-outcome>
+			<to-view-id>/UserLogin.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	
+	
+</faces-config>
