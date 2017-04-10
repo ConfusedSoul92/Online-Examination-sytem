@@ -1,4 +1,4 @@
-# Online-Examination-sytem
+s# Online-Examination-system
 
 This is an Web Project the admin user creates all the tables neccessary for the implementation of the project via admin interface provided and can also provide admin rights to other users.
 The admin can create users either using the interface or via uploading a .csv or .tsv file conatining the relevant data.
